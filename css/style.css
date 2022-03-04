@@ -1,0 +1,31 @@
+body {
+  text-align: center;
+  font-size: 1.5em;
+  background-color: rgb(212, 226, 133);
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.accordion {
+    background-color: rgb(212, 226, 133);
+    color: rgb(0, 0, 0);
+    cursor: grab;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 25px;
+    /*transition: 0.4s;*/
+  }
+  
+  .active, .accordion:hover {
+    background-color: rgb(173, 201, 52); 
+  }
+  
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: rgb(212, 226, 133);
+    overflow: hidden;
+  }
+  

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Programming styles</title>
+</head>
+<body>
+<h2>Programming styles</h2>
+
+<button class="accordion">Behaviour-driven development</button>
+<div class="panel">
+  <p>
+    Lühendatult BDD, on tarkvaraarenduse meetod, mis on välja arenenud testimisel põhinevast arendusest.
+    Käitumisel põhinev arendus kombineerib testimisel põhineva arenduse üldiseid tehnikaid ja põhimõtted. 
+    Selle eesmärk on pakkuda arendustiimile ja juhtivtiimile jagatud tööriista tarkvara arendamisel.
+    </p>
+    <img src="images/BDD.png" alt="BDD" width="410px" initial-scale="1.0">
+</div>
+
+<button class="accordion">Design-driven development</button>
+<div class="panel">
+  <p>
+    Disainipõhine arendus kasutab disaini, kui protsessi osa, et õppida ja paremini määratleda nõudeid ja luua paremaid ja teadlikumaid tehnoloogilisi lahendusi. 
+    Seda võib vaadelda ka kui protsessi, mille käigus disain ja kasutajakogemus juhivad toote või tarkvararakenduse väljatöötamist. 
+    See toob kaasa tooteid, mida inimesed naudivad ja tahavad teistele rääkida.
+  </p>
+  <img src="images/DDD.png" alt="DDD" width="410px" initial-scale="1.0">
+</div>
+
+<button class="accordion">Domain-driven design</button>
+<div class="panel">
+  <p>
+    Domeenipõhise disaini määratlemiseks peaksime kõigepealt kindlaks tegema, mida me selles kontekstis (ja arengus üldiselt) domeeni all mõtleme. 
+    Domeeni ühine sõnastiku määratlus on: "teadmiste või tegevuste sfäär." 
+    Teisisõnu, rakenduste arendamise ajal on domeen " teadmiste ja tegevuse sfäär, mille ümber rakenduse loogika keerleb.”
+  </p>
+  <img src="images/domain.png" alt="domain" width="410px" initial-scale="1.0">
+</div>
+
+<button class="accordion">Secure by design</button>
+<div class="panel">
+  <p>
+    SBD tarkvaraarenduses, tähendab, et tarkvara tooted ja võimalused on kavandatud olema turvalised.
+  </p>
+  <img src="images/design.png" alt="design" width="410px" initial-scale="1.0">
+</div>
+
+<button class="accordion">Test-driven development</button>
+<div class="panel">
+  <p>
+    Testimisel põhinev arendus on tarkvaraarenduse meetod, kus testid kirjutatakse enne tarkvara. 
+    Arendusprotsess koosneb lühikestest iteratsioonidest, kus esmalt kirjutatakse ebaõnnestuv test ning seejärel minimaalne kood, et see test läbi läheks. 
+    Selline arendus tagab olukorra, kus kogu kood on alati testitud. Sellisel viisil kirjutatud koodi on kergem refaktoreerida ning testid aitavad ka programmi eeldatavat käitumist dokumenteerida. 
+    Testimisel põhinevat arendust rakendatakse ka olemasoleva koodi täiustamisel ja silumisel.
+  </p>
+  <img src="images/TDD.png" alt="TDD" width="410px" initial-scale="1.0">
+</div>
+
+<button class="accordion">Acceptance test-driven development</button>
+<div class="panel">
+  <p>
+    (ATDD) hõlmab erinevate vaatenurkadega meeskonnaliikmeid (klient, arendus, testimine), 
+    kes teevad koostööd vastuvõtutestide kirjutamiseks enne vastava funktsionaalsuse rakendamist. 
+    Vastuvõtukatse genereerimiseks tekkivaid koostööarutelusid nimetatakse sageli kolmeks amigoks, 
+    mis esindavad kliendi kolme vaatenurka (millist probleemi me proovime lahendada?), arendus (kuidas saaksime selle probleemi lahendada?) ja testimine (kuidas oleks...).
+  </p>
+  <img src="images/ATDD.png" alt="ATDD" width="410px" initial-scale="1.0">
+</div>
+
+<button class="accordion">Continuous test-driven development</button>
+<div class="panel">
+  <p>
+    (CT) on tarkvaraarenduse protsess, kus rakendusi testitakse pidevalt kogu tarkvaraarenduse elutsükli (SDLC) vältel. 
+    CT eesmärk on hinnata tarkvara kvaliteeti kogu SDLC-s, pakkudes kriitilist tagasisidet varem ning võimaldades kvaliteetsemaid ja kiiremaid tarneid.
+  </p>
+  <img src="images/cont.png" alt="cont" width="410px" initial-scale="1.0">
+</div>
+
+<button class="accordion">Specification by example</button>
+<div class="panel">
+  <p>
+    (SBE) on koostööl põhinev lähenemine tarkvaratoodete nõuete ja ettevõtlusele suunatud funktsionaalsete testidele, 
+    mis põhineb nõuete hõivamisel ja illustreerimisel, kasutades abstraktsete väidete asemel realistlikke näiteid.
+  </p>
+  <img src="images/sbe.jpeg" alt="sbe" width="410px" initial-scale="1.0">
+</div>
+
+<button class="accordion">Data-driven development</button>
+<div class="panel">
+  <p>
+    Andmepõhine programmeerimine on stiil, milles programmi avaldused kirjeldavad sobitatavaid andmeid ja vajalikku töötlemist, 
+    selle asemel, et määratleda võetavate sammude jada. Andmepõhiste keelte standardnäited on tekstitöötluskeeled sed ja AWK, 
+    neid tuntakse ka kui reale orienteeritud keeli-ja mustrite sobitamine toimub peamiselt regulatsiooni või reanumbrite kaudu.
+  </p>
+  <img src="images/data.png" alt="data" width="410px" initial-scale="1.0">
+</div>
+
+<button class="accordion">Data-oriented design</button>
+<div class="panel">
+  <p>
+    Andmetele orienteeritud disain on see, et see seisneb teie andmete korraldamises tõhusaks töötlemiseks. 
+    Eriti seoses vahemälu puudustega jne. Andmepõhine disain on seevastu see, kui lasta andmetel kontrollida teie programmi käitumist.
+  </p>
+  <img src="images/data-oriented.png" alt="data-oriented" width="410px" initial-scale="1.0">
+</div>
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+    </script>
+    
+</body>
+</html>
