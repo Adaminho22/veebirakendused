@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 1rem;
+        }
+
+        th {
+            color: white;
+            background-color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Fridge Database</h2>
+
+    <button id="myBtn">Open ERD</button>
+
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Fridge ERD</h3>
+
+            <h3>ERD Description</h3>
+
+            <h4>Table FoodType</h4>
+            <ul>
+                <li>Descriptions of what the table means and how it's functionally used (in the UI, etc.)</li>
+                <p>FoodType tabel sisaldab kahte veergu: Id ja TypeName. Tabel FoodType sisaldab ainult andmeid toitude tüüpide kohta.</p>
+                <li>Descriptions of what each attribute means</li>
+                <p>Id on tabeli FoodType peamine võti ja ta on <i>int</i> tüüpi atribuut, mis võtab ainult täisarvulisi sisendeid. Sisend ei tohi olla tühi.</p>
+                <p>TypeName on <i>varchar</i> tüüpi atribuut, mis võtab kuni 50 märgi suurust sisendit. Antud tabelis on ta toidu tüübi nimi.</p>
+                <li>Explanations of the relationships (foreign keys) from this table to others, and vice-versa</li>
+                <p>Tabel FoodType ei sisalda mingeid võõrvõtmeid, aga tema Id on võõrvõti tabelile FoodInTheFridge.</p>
+                <p>Tabeli FoodType tüüp võib olla sama mitmel erineval toidul külmkapis ja võib olla ka mitteühelgi toidu tüüp külmkapis.</p>
+            </ul>
+
+            <h4>Table FoodInTheFridge</h4>
+            <ul>
+                <li>Descriptions of what the table means and how it's functionally used (in the UI, etc.)</li>
+                <p>FoodInTheFridge tabel sisaldab kolme veergu: Id, Name ja TypeID. Tabel FoodInTheFridge sisaldab andmeid sellest, milliseid toitusid külmkapis hetkel hoitakse.</p>
+                <p>FoodInTheFridge tabel kasutab FoodType tabelit, et teada saada millist tüüpi on külmkapis olev toit.</p>
+                <li>Descriptions of what each attribute means</li>
+                <p>Id on tabeli FoodInTheFridge peamine võti ja ta on <i>int</i> tüüpi atribuut, mis võtab ainult täisarvulisi sisendeid. Sisend ei tohi olla tühi.</p>
+                <p>Name on <i>varchar</i> tüüpi atribuut, mis võtab kuni 50 märgi suurust sisendit. Antud tabelis on ta toidu nimi.</p>
+                <p>TypeId on <i>int</i> tüüpi atribuut ja FoodInTheFridge võõrvõti, mis viitab FoodType tabelile. Ta võtab ainult täisarvulisi sisendeid, mis on juba olemas FoodType tabelis.</p>
+                <li>Explanations of the relationships (foreign keys) from this table to others, and vice-versa</li>
+                <p>Tabel FoodInTheFridge sisaldab võõrvõtit TypeId, mis viitab tabeli FoodType Id-le.</p>
+                <p>Tabeli FoodInTheFridge toit võib olla ainult ühte toidu tüüpi.</p>
+            </ul>
+        </div>
+
+    </div>
+
+    <h4>FoodType</h4>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>TypeName</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Dairy</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Meat and Poultry</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Fish and Seafood</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Vegetable</td>
+        </tr>
+    </table>
+
+    <h4>FoodInTheFridge</h4>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>TypeId</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Fish Fingers</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Tomato</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Chicken</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Can of tuna</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Broccoli</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Cheese</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Yogurt</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Beef steak</td>
+            <td>2</td>
+        </tr>
+    </table>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
